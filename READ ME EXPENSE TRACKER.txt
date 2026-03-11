@@ -1,2 +1,25 @@
 READ ME EXPENSE TRACKER
 
+create database expense;
+
+create table bank_details (
+bank_id int primary key auto_increment,
+bank_name varchar(100),
+bank_balance int,
+updated_date datetime);
+
+create table category (
+category_id int primary key auto_increment,
+category_name varchar(100),
+category_type varchar(50));
+
+create table transactions (
+transaction_id int primary key auto_increment,
+amount int,
+category int,
+comments varchar(200),
+insert_date datetime,
+from_bank_account int,
+to_bank_account int,
+processed int,
+update_date datetime);
