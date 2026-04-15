@@ -4,6 +4,8 @@ import com.example.expense.entity.BankDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class MainService {
 
@@ -16,6 +18,7 @@ public class MainService {
 
 
     public int addNewBankDetails(BankDetails bankDetails) {
+        bankDetails.setUpdatedDate(new Date());
         return this.bankDetailsService.addNewBankDetails(bankDetails);
     }
 }

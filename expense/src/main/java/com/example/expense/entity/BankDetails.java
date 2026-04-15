@@ -53,4 +53,14 @@ public class BankDetails {
     public void setUpdatedDate(Date updatedDate) {
         this.updatedDate = updatedDate;
     }
+
+    @Override
+    public String toString() {
+        return "BankDetails{" +
+                "bankId=" + bankId +
+                ", bankName='" + bankName + '\'' +
+                ", bankBalance=" + bankBalance +
+                ", updatedDate=" + updatedDate +
+                '}';
+    }
 }
