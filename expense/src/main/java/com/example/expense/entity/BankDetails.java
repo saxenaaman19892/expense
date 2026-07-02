@@ -2,6 +2,7 @@ package com.example.expense.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -20,7 +21,7 @@ public class BankDetails {
     private int bankBalance;
 
     @Column(name = "updated_date")
-    private Date updatedDate;
+    private LocalDateTime updatedDate;
 
     public int getBankId() {
         return bankId;
@@ -46,11 +47,11 @@ public class BankDetails {
         this.bankBalance = bankBalance;
     }
 
-    public Date getUpdatedDate() {
+    public LocalDateTime getUpdatedDate() {
         return updatedDate;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
     }
 
